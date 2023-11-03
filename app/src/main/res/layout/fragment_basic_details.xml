@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragment.stepview.ui.BasicDetailsFragment">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFullName"
+                style="@style/CustomEditTextLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_your_full_name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilGender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:textColor="@color/black"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                app:endIconDrawable="@drawable/ic_keyboard_arrow_down"
+                app:endIconMode="dropdown_menu"
+                app:layout_constraintEnd_toEndOf="@id/tilFullName"
+                app:layout_constraintStart_toStartOf="@id/tilFullName"
+                app:layout_constraintTop_toBottomOf="@id/tilFullName">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/gender"
+                    android:inputType="none"
+                    android:maxLines="1" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDob"
+                style="@style/CustomEditTextLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:textColor="@color/black"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                app:endIconDrawable="@drawable/ic_calendar_month"
+                app:endIconMode="custom"
+                app:helperTextTextColor="@color/green"
+                app:layout_constraintEnd_toEndOf="@id/tilFullName"
+                app:layout_constraintStart_toStartOf="@id/tilFullName"
+                app:layout_constraintTop_toBottomOf="@id/tilGender">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/mm_dd_yyyy"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSubscription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:textColor="@color/black"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                app:endIconDrawable="@drawable/ic_keyboard_arrow_down"
+                app:endIconMode="dropdown_menu"
+                app:layout_constraintEnd_toEndOf="@id/tilFullName"
+                app:layout_constraintStart_toStartOf="@id/tilFullName"
+                app:layout_constraintTop_toBottomOf="@id/tilDob">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoSubscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/subscription"
+                    android:inputType="none"
+                    android:maxLines="1" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

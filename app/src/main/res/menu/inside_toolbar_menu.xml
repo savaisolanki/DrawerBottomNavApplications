@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mnCamera"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/camera"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mnGallery"
+        android:icon="@drawable/ic_image"
+        android:title="@string/gallery"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/mnImage"
+        android:icon="@drawable/ic_picture"
+        android:title="@string/image"
+        android:visible="false"
+        app:showAsAction="always" />
+</menu>

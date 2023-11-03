@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_product"
+    app:startDestination="@id/mnAddToCart">
+
+    <fragment
+        android:id="@+id/mnProduct"
+        android:name="com.example.drawerbottomnavapplication.fragment.product.ui.ProductFragment"
+        android:label="ProductFragment"
+        tools:layout="@layout/fragment_product"/>
+    <fragment
+        android:id="@+id/mnAddToCart"
+        android:name="com.example.drawerbottomnavapplication.fragment.addtocart.ui.AddToCartFragment"
+        android:label="AddToCartFragment"
+        tools:layout="@layout/fragment_add_to_cart"/>
+    <fragment
+        android:id="@+id/mnTimeSlot"
+        android:name="com.example.drawerbottomnavapplication.fragment.timeslot.ui.TimeSlotFragment"
+        android:label="TimeSlotFragment"
+        tools:layout="@layout/fragment_time_slot" />
+</navigation>

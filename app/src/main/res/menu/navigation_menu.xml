@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/mnCamera"
+            android:icon="@drawable/ic_camera"
+            android:title="@string/camera" />
+
+        <item
+            android:id="@+id/mnGallery"
+            android:icon="@drawable/ic_image"
+            android:title="@string/gallery" />
+
+
+        <item
+            android:id="@+id/mnImage"
+            android:icon="@drawable/ic_picture"
+            android:title="@string/image" />
+
+
+    </group>
+
+    <item android:title="@string/music_area">
+
+        <menu>
+            <item
+                android:id="@+id/mnAddToCart"
+                android:icon="@drawable/ic_add_to_cart"
+                android:title="@string/add_to_cart" />
+
+            <item
+                android:id="@+id/mnProduct"
+                android:icon="@drawable/ic_product"
+                android:title="@string/product" />
+
+            <item
+                android:id="@+id/mnTimeSlot"
+                android:icon="@drawable/ic_time"
+                android:title="@string/timeslot" />
+        </menu>
+    </item>
+
+
+</menu>

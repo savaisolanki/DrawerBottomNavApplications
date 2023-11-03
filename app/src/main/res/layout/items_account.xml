@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="accountModel"
+            type="com.example.drawerbottomnavapplication.fragment.account.model.AccountModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTimeSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/white">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAccount"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAccountTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:text="@{accountModel.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivAccount"
+            app:layout_constraintStart_toEndOf="@id/ivAccount"
+            app:layout_constraintTop_toTopOf="@id/ivAccount">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:text="@{accountModel.text}"
+            android:textColor="@color/white_gray"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivAccount"
+            app:layout_constraintEnd_toStartOf="@id/ivArrow"
+            app:layout_constraintTop_toTopOf="@id/ivAccount">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_forward"
+            app:layout_constraintBottom_toBottomOf="@id/ivAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivAccount" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

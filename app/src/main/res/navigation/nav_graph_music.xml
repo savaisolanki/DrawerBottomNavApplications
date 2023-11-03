@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_music"
+    app:startDestination="@id/mnGallery">
+
+    <fragment
+        android:id="@+id/mnGallery"
+        android:name="com.example.drawerbottomnavapplication.fragment.gallery.ui.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery"/>
+    <fragment
+        android:id="@+id/mnImage"
+        android:name="com.example.drawerbottomnavapplication.fragment.image.ui.ImageFragment"
+        android:label="ImageFragment"
+        tools:layout="@layout/fragment_image"/>
+    <fragment
+        android:id="@+id/mnCamera"
+        android:name="com.example.drawerbottomnavapplication.fragment.camera.ui.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera"/>
+</navigation>

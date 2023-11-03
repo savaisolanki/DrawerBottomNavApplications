@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.splash.ui.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_nav_graph_product"
+            app:destination="@id/nav_graph_product"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_mnAddToCart"
+            app:destination="@id/mnAddToCart" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.home.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_scanCodeFragment"
+            app:destination="@id/scanCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.main.ui.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mnProduct"
+        android:name="com.example.drawerbottomnavapplication.fragment.product.ui.ProductFragment"
+        android:label="ProductFragment"
+        tools:layout="@layout/fragment_product">
+
+    </fragment>
+    <fragment
+        android:id="@+id/mnAddToCart"
+        android:name="com.example.drawerbottomnavapplication.fragment.addtocart.ui.AddToCartFragment"
+        android:label="AddToCartFragment"
+        tools:layout="@layout/fragment_add_to_cart">
+
+
+        <action
+            android:id="@+id/action_mnAddToCart_to_documentScannerFragment"
+            app:destination="@id/documentScannerFragment" />
+        <action
+            android:id="@+id/action_mnAddToCart_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_mnAddToCart_to_scanCodeFragment"
+            app:destination="@id/scanCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mnTimeSlot"
+        android:name="com.example.drawerbottomnavapplication.fragment.timeslot.ui.TimeSlotFragment"
+        android:label="TimeSlotFragment"
+        tools:layout="@layout/fragment_time_slot">
+
+        <action
+            android:id="@+id/action_mnTimeSlot_to_tabLayoutFragment"
+            app:destination="@id/tabLayoutFragment" />
+        <action
+            android:id="@+id/action_mnTimeSlot_to_viewPager2Fragment"
+            app:destination="@id/viewPager2Fragment" />
+        <action
+            android:id="@+id/action_mnTimeSlot_to_stepViewFragment"
+            app:destination="@id/stepViewFragment" />
+        <action
+            android:id="@+id/action_mnTimeSlot_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_mnTimeSlot_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mnGallery"
+        android:name="com.example.drawerbottomnavapplication.fragment.gallery.ui.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/mnImage"
+        android:name="com.example.drawerbottomnavapplication.fragment.image.ui.ImageFragment"
+        android:label="ImageFragment"
+        tools:layout="@layout/fragment_image" />
+    <fragment
+        android:id="@+id/mnCamera"
+        android:name="com.example.drawerbottomnavapplication.fragment.camera.ui.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/viewPager2Fragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.viewpager.ui.ViewPager2Fragment"
+        android:label="ViewPager2Fragment"
+        tools:layout="@layout/fragment_view_pager2" />
+    <fragment
+        android:id="@+id/tabLayoutFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.tablayout.ui.TabLayoutFragment"
+        android:label="TabLayoutFragment"
+        tools:layout="@layout/fragment_tab_layout" />
+    <fragment
+        android:id="@+id/stepViewFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.stepview.ui.StepViewFragment"
+        android:label="StepViewFragment"
+        tools:layout="@layout/fragment_step_view" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.onboarding.ui.OnBoardingFragment"
+        android:label="OnBoardingFragment"
+        tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/onBoardingScreen1Fragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.onboarding.ui.OnBoardingScreen1Fragment"
+        android:label="OnBoardingScreen1Fragment"
+        tools:layout="@layout/fragment_on_boarding_screen1" />
+    <fragment
+        android:id="@+id/onBoardingScreen2Fragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.onboarding.ui.OnBoardingScreen2Fragment"
+        android:label="OnBoardingScreen2Fragment"
+        tools:layout="@layout/fragment_on_boarding_screen2" />
+    <fragment
+        android:id="@+id/onBoardingScreen3Fragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.onboarding.ui.OnBoardingScreen3Fragment"
+        android:label="OnBoardingScreen3Fragment"
+        tools:layout="@layout/fragment_on_boarding_screen3" />
+    <fragment
+        android:id="@+id/addressDetailsFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.stepview.ui.AddressDetailsFragment"
+        android:label="AddressDetailsFragment"
+        tools:layout="@layout/fragment_address_details" />
+    <fragment
+        android:id="@+id/basicDetailsFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.stepview.ui.BasicDetailsFragment"
+        android:label="BasicDetailsFragment"
+        tools:layout="@layout/fragment_basic_details" />
+    <fragment
+        android:id="@+id/paymentDetailsFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.stepview.ui.PaymentDetailsFragment"
+        android:label="PaymentDetailsFragment"
+        tools:layout="@layout/fragment_payment_details" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.login.ui.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"/>
+    <fragment
+        android:id="@+id/documentScannerFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.documentscanner.ui.DocumentScannerFragment"
+        android:label="DocumentScannerFragment"
+        tools:layout="@layout/fragment_documnet_scanner">
+        <action
+            android:id="@+id/action_documentScannerFragment_to_accountFragment2"
+            app:destination="@id/accountFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment2"
+        android:name="com.example.drawerbottomnavapplication.fragment.account.ui.AccountFragment"
+        android:label="AccountFragment" />
+    <fragment
+        android:id="@+id/scanCodeFragment"
+        android:name="com.example.drawerbottomnavapplication.fragment.scancode.ui.ScanCodeFragment"
+        android:label="ScanCodeFragment"
+        tools:layout="@layout/fragment_scan_code"/>
+
+</navigation>

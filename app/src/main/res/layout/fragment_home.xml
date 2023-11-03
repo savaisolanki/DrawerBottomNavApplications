@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_gray"
+        tools:context=".fragment.home.ui.HomeFragment">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivLogout"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_22sdp"
+                            android:src="@drawable/ic_logout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:text="@string/name"
+                            android:textColor="@color/red"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivLogout" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/id"
+                            android:textColor="@color/red"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvName" />-->
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvPdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/pdf_items_layout" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_search"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/search"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:textColorHint="#7E7E84"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toStartOf="@id/ivFolder"
+                    app:layout_constraintStart_toStartOf="@id/cvPdf"
+                    app:layout_constraintTop_toBottomOf="@id/cvPdf" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_manage_accounts"
+                    app:layout_constraintBottom_toBottomOf="@id/etSearch"
+                    app:layout_constraintEnd_toStartOf="@id/ivIncrese"
+                    app:layout_constraintStart_toEndOf="@id/etSearch"
+                    app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivIncrese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_manage_accounts"
+                    app:layout_constraintBottom_toBottomOf="@id/etSearch"
+                    app:layout_constraintEnd_toStartOf="@id/ivFolderOverlap"
+                    app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFolderOverlap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_manage_accounts"
+                    app:layout_constraintBottom_toBottomOf="@id/etSearch"
+                    app:layout_constraintEnd_toStartOf="@id/ivList"
+                    app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_manage_accounts"
+                    app:layout_constraintBottom_toBottomOf="@id/etSearch"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvMyFolders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:text="@string/my_folder"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold"
+                    app:layout_constraintStart_toStartOf="@id/etSearch"
+                    app:layout_constraintTop_toBottomOf="@id/etSearch" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMyFolders"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/pdf_folder_items_layout" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPdfList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvFolder"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/pdf_items_list_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
